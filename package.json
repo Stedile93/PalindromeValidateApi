@@ -1,0 +1,26 @@
+{
+  "name": "palindrome_validade_api",
+  "version": "1.0.0",
+  "description": "Restful API to verify if a word, phrase, number, or another sequence of characters is or is not a palindrome.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stedile93/PalindromeValidateApi.git"
+  },
+  "keywords": [
+    "API",
+    "Palindrome"
+  ],
+  "author": "Giuliano Stedile",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stedile93/PalindromeValidateApi/issues"
+  },
+  "homepage": "https://github.com/Stedile93/PalindromeValidateApi#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
