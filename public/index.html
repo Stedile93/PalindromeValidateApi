@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app="palindromeAPI">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Palindrome Validade API</title>
+
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <style>
+            html                    { overflow-y:scroll; }
+            body                    { padding-top:50px; }
+            #lista-inputs           { margin-bottom:30px; }
+            form button             { margin-top: 25px; }
+            form .form-group:first-child { padding-left: 0; }
+        </style>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script src="main.js"></script>
+
+    </head>
+
+    <body ng-controller="mainController">
+        <div class="container">
+
+            <div class="jumbotron text-center">
+                <h1>Palindrome Validation</h1>
+            </div>
+
+            <div id="lista-inputs">
+                <table class="table table-striped">
+
+                    <tr>
+                        <th>INPUT</th>
+                        <th>RESULT</th>
+                    </tr>
+
+                    <tr ng-repeat="item in listInputs">
+                        <td>{{ item.input }}</td>
+                        <td>{{ item.message }}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="input-form">
+                <hr>
+                <form>
+                    <div class="form-group col-md-3">
+                        <label for="valueInput">Input</label>
+                        <input type="text" class="form-control" id="valueInput" placeholder="Word, phrase, number, or another sequence of characters" ng-model="formPalindrome.value" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <button type="submit" class="btn btn-primary" ng-click="verifyPalindromeInput()">Verify</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </body>
+</html>
